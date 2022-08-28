@@ -44,6 +44,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: calc(100vh - 2.7rem);
   }
 
   // ==============================================
@@ -144,15 +145,59 @@ body {
     }
 
     &:hover {
-      transform: translateY(3px);
+      transform: translateY(-2px);
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
     }
 
     &:active {
-      transform: translateY(5px);
+      transform: translateY(1px);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     }
   }
+  //===============================================
+  // HEADER FOOTER
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__bottom-item {
+    flex: 0 1 25%;
+    border-top: 4px solid $color-white;
+    padding: 2.5rem 0 2.5rem 0;
+    color: $color-white;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__bottom-item.active::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 25%;
+    height: 4px;
+    background-color: $color-primary-1;
+    top: -4px;
+    left: 0;
+  }
+
+  &__bottom-span {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  &__bottom-text {
+    display: inline-block;
+    font-weight: 400;
+    margin-left: .75rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
 }
 
 
