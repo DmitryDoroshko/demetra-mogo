@@ -4,7 +4,13 @@ $font-cursive: 'Kaushan Script', cursive;
 
 $color-primary-1: #e78382;
 $color-primary-2: #f0d78a;
+$color-light-blue: #95e1d3;
+$color-light-blue-2: #b5eae0;
+
 $color-white: #fff;
+$color-grey-1: #9f9f9f;
+$color-grey-2: #e5e5e5;
+$color-grey-3: #b3b3b3;
 
 *, *::after, *::before {
   margin: 0;
@@ -32,6 +38,7 @@ body {
 //===========================================
 // HEADER
 .header {
+  width: 100%;
   min-height: 100vh;
   background: linear-gradient(to bottom,
       rgba($color-primary-1, 0.9),
@@ -154,6 +161,7 @@ body {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     }
   }
+
   //===============================================
   // HEADER FOOTER
   &__footer {
@@ -169,6 +177,7 @@ body {
     padding: 2.5rem 0 2.5rem 0;
     color: $color-white;
     position: relative;
+
     &:not(:last-child) {
       margin-right: 3rem;
     }
@@ -197,8 +206,271 @@ body {
     font-size: 1.8rem;
     text-transform: uppercase;
   }
-
 }
+
+// ==============================================
+// ABOUT US SECTION
+.about-us {
+  padding: 9rem 0 10rem 0;
+  overflow: hidden;
+
+  &__content {
+  }
+
+  &__text {
+    text-align: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto 10rem auto;
+    color: $color-grey-1;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+
+  &__pictures {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    background-color: $color-light-blue;
+    width: 31%;
+    z-index: 10;
+  }
+
+  &__item:hover &__picture &__img {
+    opacity: .1;
+  }
+
+  &__item:hover &__picture,
+  &__item:hover &__overlay &__overlay-content {
+    transform: translate(-1rem, -1rem);
+  }
+
+  &__item:hover &__overlay &__overlay-content {
+    visibility: visible;
+  }
+
+  &__picture {
+    background: linear-gradient(to bottom,
+        $color-primary-1,
+        $color-primary-2);
+    transition: all .3s;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    z-index: -1;
+    transition: opacity .3s linear;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(to bottom,
+        rgba($color-primary-1, 0.9),
+        rgba($color-primary-2, 0.9));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  &__overlay-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: all .3s;
+    color: $color-white;
+
+    & > * {
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+    & > i {
+      display: block;
+    }
+  }
+}
+
+// ==========================================
+// TITLE BOX
+.title-box {
+  text-align: center;
+  margin-bottom: 9rem;
+  position: relative;
+
+  &__subtitle {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-family: $font-cursive;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 6rem;
+    height: 3px;
+    background-color: $color-primary-1;
+    position: absolute;
+    left: 50%;
+    bottom: -4.5rem;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// ==============================================
+// STATISTICS
+.statistics {
+  background-color: $color-light-blue;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    color: $color-white;
+  }
+
+  &__item {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8.7rem 3.5rem;
+    border-left: 1px solid $color-light-blue-2;
+    text-align: center;
+    &:last-child {
+      border-right: 1px solid $color-light-blue-2;
+    }
+  }
+
+  &__count {
+    font-weight: 700;
+    font-size: 7.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+}
+
+// ===============================================
+// SERVICES
+.services {
+  padding: 10.5rem 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5rem;
+
+    &:not(:last-child) {
+      padding-bottom: 5rem;
+      border-bottom: 1px solid $color-grey-2;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 31%;
+    gap: 2.4rem;
+  }
+
+  &__picture {
+    max-width: 3.3rem;
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  &__text {
+    color: $color-grey-1;
+    font-size: 1.5rem;
+    font-family: $font-secondary;
+    font-weight: 400;
+  }
+}
+
+.devices {
+  background-size: cover;
+  background: url("../img/devices/bg.png") no-repeat center;
+  position: relative;
+  height: 85rem;
+  width: 100%;
+
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title-box {
+    padding-top: 10.5rem;
+  }
+
+  &__tablet {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, 0);
+  }
+
+  &__tablet-img {
+  }
+
+  &__iphone {
+    position: absolute;
+    bottom: -10rem;
+    right: 20%;
+    z-index: 25;
+  }
+
+  &__iphone-img {
+  }
+}
+
+
+
 
 
 
