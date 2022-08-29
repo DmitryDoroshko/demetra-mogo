@@ -351,6 +351,13 @@ body {
 .devices__title-box {
   padding-top: 10.5rem;
 }
+.devices__items {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+}
 .devices__tablet {
   position: absolute;
   bottom: 0;
@@ -360,8 +367,8 @@ body {
 }
 .devices__iphone {
   position: absolute;
-  bottom: -10rem;
-  right: 20%;
+  bottom: -10.5rem;
+  right: 20rem;
   z-index: 25;
 }
 
