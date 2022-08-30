@@ -452,6 +452,9 @@ body {
   width: 100%;
   background-color: #f8f8f8;
 }
+.slider--white {
+  background-color: #fff;
+}
 .slider__inner {
   display: flex;
   padding: 6.6rem 10.5rem;
@@ -486,6 +489,11 @@ body {
   border: 3px solid #95e1d3;
   display: inline-block;
   padding: 4rem;
+}
+.slider__picture--new-image {
+  border: none;
+  padding: 0;
+  border-radius: 50%;
 }
 .slider__item {
   align-self: flex-start;
@@ -607,6 +615,72 @@ body {
 }
 .icons__img {
   width: 100%;
+}
+
+.work {
+  padding: 11.3rem 0 0 0;
+}
+.work__inner {
+  width: 100%;
+}
+.work__text {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  color: #9f9f9f;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 8.3rem;
+}
+.work__row {
+  display: flex;
+  flex-direction: row;
+}
+.work__column {
+  max-width: 25%;
+  width: 100%;
+}
+.work__item {
+  position: relative;
+  background: linear-gradient(to bottom, #e78382, #f0d78a);
+}
+.work__item:hover .work__picture .work__img {
+  opacity: 0.1;
+}
+.work__item:hover .work__overlay {
+  visibility: visible;
+}
+.work__picture {
+  width: 100%;
+}
+.work__img {
+  width: 100%;
+  display: block;
+}
+.work__overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  transition: visibility 0.1s linear;
+}
+.work__overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.work__overlay-content > i {
+  font-size: 3rem;
+}
+.work__overlay-head {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.work__overlay-text {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */
