@@ -676,6 +676,7 @@ body {
 // TEAM
 .team {
   padding: 10rem 0;
+
   &__inner {
 
   }
@@ -791,6 +792,7 @@ body {
 .icons {
   background-color: #ccc;
   padding: 6.5rem 0;
+
   &__inner {
   }
 
@@ -803,6 +805,7 @@ body {
 // WORK
 .work {
   padding: 11.3rem 0 0 0;
+
   &__inner {
     width: 100%;
   }
@@ -865,6 +868,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     & > i {
       font-size: 3rem;
     }
@@ -880,6 +884,103 @@ body {
     font-family: $font-secondary;
   }
 }
+
+
+// ==================================================
+// CLIENTS
+.clients {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    background: url("../img/clients/bg.png") no-repeat center;
+    opacity: .2;
+    z-index: -1;
+  }
+
+  &__title-box {
+    margin-bottom: 7.5rem;
+    padding-top: 7.5rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 12rem;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    gap: 7.8rem;
+    &:not(:last-child) {
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 3rem
+  }
+
+  &__picture {
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__position {
+    font-size: 1.5rem;
+    font-family: $font-secondary;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__position::after {
+    content: "";
+    width: 6rem;
+    height: 3px;
+    background-color: $color-primary-1;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    color: #999;
+    font-size: 1.5rem;
+  }
+}
+
+
+
 
 
 
