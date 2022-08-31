@@ -885,7 +885,6 @@ body {
   }
 }
 
-
 // ==================================================
 // CLIENTS
 .clients {
@@ -978,6 +977,112 @@ body {
     font-size: 1.5rem;
   }
 }
+
+// ==================================================
+// BLOG
+.blog {
+  padding: 10.5rem 0;
+
+  &__title-box {
+  }
+
+  &__inner {
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  &__item {
+    flex: 0 0 31.6%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__picture {
+    width: 100%;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__date {
+    position: absolute;
+    z-index: 100;
+    left: -1rem;
+    bottom: 3rem;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-light-blue-2;
+    padding: 1.2rem 1.5rem;
+  }
+
+  &__number {
+    display: block;
+    font-family: $font-main;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__month {
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+  }
+
+  &__text-field {
+    padding: 1.8rem 0 2.2rem 0;
+    border-bottom: 1px solid $color-grey-1;
+  }
+
+  &__head {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    color: $color-grey-1;
+  }
+
+  &__stats {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__stats-left {
+    & > i {
+      color: $color-light-blue-2;
+      font-size: 1.5rem;
+    }
+    & > span {
+      color: $color-grey-1;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__stats-right {
+    & > i {
+      color: $color-light-blue-2;
+      font-size: 1.5rem;
+    }
+
+    & > span {
+      color: $color-grey-1;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+
 
 
 
