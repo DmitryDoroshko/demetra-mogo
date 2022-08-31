@@ -764,6 +764,7 @@ body {
 
 .blog {
   padding: 10.5rem 0;
+  overflow: hidden;
 }
 .blog__content {
   display: flex;
@@ -824,6 +825,7 @@ body {
 .blog__stats-left > i {
   color: #b5eae0;
   font-size: 1.5rem;
+  padding-right: 0.5rem;
 }
 .blog__stats-left > span {
   color: #9f9f9f;
@@ -832,10 +834,54 @@ body {
 .blog__stats-right > i {
   color: #b5eae0;
   font-size: 1.5rem;
+  padding-right: 0.5rem;
 }
 .blog__stats-right > span {
   color: #9f9f9f;
   font-size: 1.5rem;
+}
+
+.map {
+  width: 100%;
+  padding: 5rem 0;
+  position: relative;
+}
+.map::before {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-size: cover;
+  background: url("../img/map/bg.png") no-repeat center;
+  opacity: 0.2;
+  z-index: -1;
+}
+.map__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: #e78382;
+  font-size: 2.4rem;
+}
+.map__heading {
+  font-size: inherit;
+  position: relative;
+}
+.map__heading::after {
+  content: "";
+  display: inline-block;
+  width: 6rem;
+  height: 3px;
+  background-color: #e78382;
+  position: absolute;
+  left: 50%;
+  top: 5rem;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=main.css.map */
