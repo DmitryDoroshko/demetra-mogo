@@ -22,6 +22,10 @@
     display: flex;
     flex-direction: row;
     gap: 3rem;
+    @media only screen and (max-width: $breakpoint-large) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__picture {
@@ -35,6 +39,13 @@
   }
 
   &__accordion {
+    @media only screen and (max-width: $breakpoint-large) {
+      width: 60%;
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      width: 80%;
+    }
   }
 
   &__item {
@@ -94,6 +105,4 @@
       display: none;
     }
   }
-
-
 }

@@ -37,6 +37,10 @@
   }
 
   &__tablet-img {
+    width: 100%;
+    @media only screen and (max-width: $breakpoint-large) {
+      height: 50rem;
+    }
   }
 
   &__iphone {
@@ -44,8 +48,15 @@
     bottom: -10.5rem;
     right: 20rem;
     z-index: 25;
+    @media only screen and (max-width: $breakpoint-large) {
+      right: 35rem;
+    }
   }
 
   &__iphone-img {
+    width: 100%;
+    @media only screen and (max-width: $breakpoint-large) {
+      height: 35rem;
+    }
   }
 }

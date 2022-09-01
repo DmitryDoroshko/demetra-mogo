@@ -8,12 +8,20 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
     flex: 0 0 31.6%;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: $breakpoint-medium) {
+      width: 50%;
+    }
   }
 
   &__picture {

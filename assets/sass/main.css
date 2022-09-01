@@ -126,10 +126,21 @@ body {
   justify-content: space-between;
   gap: 3rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .blog__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .blog__item {
   flex: 0 0 31.6%;
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 56.25em) {
+  .blog__item {
+    width: 50%;
+  }
 }
 .blog__picture {
   width: 100%;
@@ -233,10 +244,23 @@ body {
 .clients__row:not(:last-child) {
   margin-bottom: 7rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .clients__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
 .clients__item {
   display: flex;
   align-items: center;
   gap: 3rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .clients__item {
+    max-width: 50%;
+    width: 100%;
+  }
 }
 .clients__picture {
   width: 100%;
@@ -306,12 +330,34 @@ body {
   z-index: 10;
   transform: translate(-50%, 0);
 }
+.devices__tablet-img {
+  width: 100%;
+}
+@media only screen and (max-width: 62.5em) {
+  .devices__tablet-img {
+    height: 50rem;
+  }
+}
 .devices__iphone {
   position: absolute;
   bottom: -10.5rem;
   right: 20rem;
   z-index: 25;
 }
+@media only screen and (max-width: 62.5em) {
+  .devices__iphone {
+    right: 35rem;
+  }
+}
+.devices__iphone-img {
+  width: 100%;
+}
+@media only screen and (max-width: 62.5em) {
+  .devices__iphone-img {
+    height: 35rem;
+  }
+}
+
 .footer {
   background-color: #f8f8f8;
   color: black;
@@ -434,6 +480,12 @@ body {
   width: 23%;
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 75em) {
+  .footer__instagram {
+    align-items: center;
+    width: 50%;
+  }
 }
 .footer__instagram-content {
   display: flex;
@@ -830,11 +882,29 @@ body {
   padding-bottom: 5rem;
   border-bottom: 1px solid #e5e5e5;
 }
+@media only screen and (max-width: 56.25em) {
+  .services__row:not(:last-child) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .services__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
 .services__item {
   display: flex;
   justify-content: space-between;
   width: 31%;
   gap: 2.4rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .services__item {
+    width: 50%;
+  }
 }
 .services__picture {
   max-width: 3.3rem;
@@ -891,11 +961,21 @@ body {
   right: 2.3rem;
   transform: rotate(45deg);
 }
+@media only screen and (max-width: 56.25em) {
+  .slider__arrow {
+    display: none;
+  }
+}
 .slider__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 6rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .slider__content {
+    flex-direction: column;
+  }
 }
 .slider__picture {
   border: 3px solid #95e1d3;
@@ -998,10 +1078,22 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 56.25em) {
+  .team__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
 .team__item {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .team__item {
+    width: 50%;
+  }
 }
 .team__person {
   position: relative;
@@ -1120,6 +1212,12 @@ body {
   flex-direction: row;
   gap: 3rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .what-we-do__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .what-we-do__picture {
   flex: 0 1 49%;
 }
@@ -1127,6 +1225,16 @@ body {
   max-width: 57rem;
   width: 100%;
   height: auto;
+}
+@media only screen and (max-width: 62.5em) {
+  .what-we-do__accordion {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .what-we-do__accordion {
+    width: 80%;
+  }
 }
 .what-we-do__item-main {
   display: flex;
@@ -1194,9 +1302,20 @@ body {
   display: flex;
   flex-direction: row;
 }
+@media only screen and (max-width: 56.25em) {
+  .work__row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .work__column {
   max-width: 25%;
   width: 100%;
+}
+@media only screen and (max-width: 56.25em) {
+  .work__column {
+    max-width: 75%;
+  }
 }
 .work__item {
   position: relative;

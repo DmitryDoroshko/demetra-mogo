@@ -34,6 +34,10 @@
       right: 2.3rem;
       transform: rotate(45deg);
     }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      display: none;
+    }
   }
 
   &__content {
@@ -41,6 +45,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 6rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+    }
   }
 
   &__picture {
