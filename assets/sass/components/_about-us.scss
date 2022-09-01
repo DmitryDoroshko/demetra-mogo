@@ -1,0 +1,104 @@
+// ==============================================
+// ABOUT US SECTION
+.about-us {
+  padding: 9rem 0 10rem 0;
+  overflow: hidden;
+
+  &__content {
+  }
+
+  &__text {
+    text-align: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto 10rem auto;
+    color: $color-grey-1;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+
+  &__pictures {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-wrap: wrap;
+    }
+
+  }
+  &__item {
+    position: relative;
+    background-color: $color-light-blue;
+    width: 31%;
+    z-index: 10;
+    @media only screen and (max-width: $breakpoint-medium) {
+      width: 60%;
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__item:hover &__picture &__img {
+    opacity: .1;
+  }
+
+  &__item:hover &__picture,
+  &__item:hover &__overlay &__overlay-content {
+    transform: translate(-1rem, -1rem);
+  }
+
+  &__item:hover &__overlay &__overlay-content {
+    visibility: visible;
+  }
+
+  &__picture {
+    background: linear-gradient(to bottom,
+        $color-primary-1,
+        $color-primary-2);
+    transition: all .3s;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    z-index: -1;
+    transition: opacity .3s linear;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(to bottom,
+        rgba($color-primary-1, 0.9),
+        rgba($color-primary-2, 0.9));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  &__overlay-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: all .3s;
+    color: $color-white;
+
+    & > * {
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    & > i {
+      display: block;
+    }
+  }
+}

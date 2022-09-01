@@ -1,0 +1,202 @@
+// ==================================================
+// FOOTER
+.footer {
+  background-color: $color-grey-4;
+  color: black;
+
+  &__main {
+    display: flex;
+    padding: 7.7rem 0 7rem;
+    justify-content: space-between;
+    border-bottom: 1px solid lighten(black, 50%);
+  }
+
+  // MOGO
+  &__mogo {
+    max-width: 37.5%;
+    width: 100%;
+  }
+
+  &__mogo-logo {
+    font-size: 4.6rem;
+    font-weight: 700;
+    color: #ccc;
+    margin-bottom: 4rem;
+  }
+
+  &__mogo-text {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: #ccc;
+  }
+
+  &__mogo-followers {
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.75rem;
+  }
+
+  &__mogo-count {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  &__mogo-followers-text {
+    font-size: 1.4rem;
+  }
+
+  &__mogo-follow-us {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  &__mogo-follows-us-text {
+    font-size: 1.5rem;
+    font-family: $font-secondary;
+  }
+
+  &__mogo-icons {
+    font-size: 1.5rem;
+    color: $color-light-blue-2;
+  }
+
+  &__mogo-form {
+    display: flex;
+  }
+
+  &__mogo-input {
+    padding: 1.4rem;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: $font-secondary;
+    border: 1px solid #ccc;
+    color: black;
+    flex-basis: 23rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 2rem 4rem rgba(black, 0.2);
+    }
+
+    &::placeholder {
+      font-size: inherit;
+      color: #ccc;
+    }
+  }
+
+  &__mogo-button {
+    margin: 0;
+    cursor: pointer;
+    padding: 1.4rem 3.2rem;
+    font-size: 1.5rem;
+    color: $color-white;
+    background-color: $color-light-blue-2;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: darken($color-light-blue-2, 10%);
+    }
+  }
+
+  // HEADER SECONDARY
+  &__header-secondary {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+
+  //BLOGS
+  &__blogs {
+    width: 30%;
+  }
+
+  &__blogs-content {
+  }
+
+  &__blogs-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__blogs-picture {
+    width: 100%;
+  }
+
+  &__blogs-img {
+    width: 100%;
+    height: 8rem;
+  }
+
+  &__blogs-text {
+
+  }
+
+  &__blogs-heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  &__blogs-date {
+    color: #ccc;
+    margin-top: 5px;
+  }
+
+  // INSTAGRAM
+  &__instagram {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__instagram-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &__instagram-row {
+    display: flex;
+    gap: 3px;
+  }
+
+  &__instagram-item {
+  }
+
+  &__instagram-img {
+    display: block;
+  }
+
+  &__instagram-text {
+    &:link, &:visited {
+      padding-top: 2rem;
+      color: $color-primary-1;
+      text-decoration: none;
+      transition: all .2s;
+    }
+
+    &:hover {
+      text-decoration: underline $color-primary-1 solid 1px;
+    }
+  }
+
+  //LEGAL
+  &__legal {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+
+  &__legal-text {
+    font-size: inherit;
+  }
+
+  &__legal-author {
+    text-decoration: none;
+    color: $color-primary-1;
+    cursor: pointer;
+  }
+}
